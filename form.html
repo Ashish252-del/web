@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User input</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body> 
+<div class = "container" > 
+  <form action=""> <!-- Required attribute is used to making that section compulsary for filling -->
+    <div style="text-align: center;">  <h1 > User Details</h1> </div> 
+    <!--for taking password we should use input type = "password"-->
+  <p> Name* &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <input type ="text" name = "fname" placeholder="Type name" required></p>
+   <!--INPUT TAG FOR TAKING  INPUT FROM USER attribute placeholder is used to just display a value -->  
+  <p>Phone No*:<input type ="number" name = "number" required></p> <!--Valu of name should be different for different input type-->
+  <p>Email id*: &nbsp;<input type ="email" name = "email" required> </p> 
+  <fieldset> <!-- for combining  in a field -->
+    <legend>Gender</legend> <!-- for giving name of field set-->
+    <p>Male<input type ="radio" name = "Gender" id="male"></p> Female<input type ="radio" name = "Gender" id="female">
+    <!-- since both have same type thats why Gender in both if you will give diff values then both radio point will select -->
+    </fieldset> 
+    <P>Address* <textarea name ="Address" cols="100" rows="8" required></textarea></P> <!-- textarea is used because address may be long -->
+    <select name = "Branch" id="Branch" required> <!--sELECT TAG IS USED TO GIVE OPTION OF SELECTION -->
+      <option value="">Select Your Branch</option><!--INSIDE VALUE THE THING THAT WE HAVE WRITTEN WE GO TO SERVER-->
+      <option value="CSE">CSE</option> <option value="IT">IT</option> <option value="ECE">ECE</option>
+    </select> <P>Name of your university/college* <input type="text" name = "college name" required></P>
+    <p>Date of birth <input type = "date" name="date of birth " id="DOB"></p> <!-- in server it will go like name that is date of birth 
+    and value will be selected by user-->
+    <input type="submit" value="Submit">
+  </div>
+  </form>  
+</body>
+</html>
